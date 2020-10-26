@@ -1,0 +1,10 @@
+print('Роботу виконав Микитчук Степан (Завдання №2)')
+
+a = input('Напишіть ваш текст:')
+res = ''
+sym = {0: '', 1: '.,?!', 2: 'ABC', 3: 'DEF', 4: 'GHI', 5: 'JKL', 6: 'MNO', 7: 'PQRS', 8: 'TUV', 9: 'WXYZ'}
+for i in a:
+    for n in range(10):
+        if i in sym[n] or i.upper() in sym[n]:
+            res = res + str(n) * (sym[n].index(i.upper()) + 1)
+print(res)
